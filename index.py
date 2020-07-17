@@ -9,14 +9,14 @@ class Index(MethodView):
     def get(self):
         # Choice allows for new random gif to be
         # periodically served to user.
-        choice = random.randint(1, 5)
+        choice = random.randint(1, 20)
 
         # If the user hasn't liked any gif yet
         # It calls for a random gif to be delivered
         if not user.likes:
             url = Gifs().retrieve_rand()
         else:
-            if choice > 2:
+            if choice > 1:
                 url = Gifs().retrieve()
             else:
                 url = Gifs().retrieve_rand()
