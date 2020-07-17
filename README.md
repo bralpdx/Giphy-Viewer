@@ -11,3 +11,6 @@ content that the user finds appealing.
 A record of previously shown gifs is kept, as a way to keep the user from seeing repeat content; however, the data for this app
 has been collected via the [Giphy-Viewer Webscraper](https://github.com/bralpdx/Giphy-Viewer/tree/master/scrape), so it is subject to showing
 repeated gifs, due to [Giphy's](https://giphy.com/) gif viewer occasionally showing duplicate content under different URLs.
+
+
+Author: Jonathan Bral
