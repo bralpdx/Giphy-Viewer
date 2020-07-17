@@ -75,8 +75,6 @@ class ScrapeBot:
             for item in items:
                 item_tag = item.find_element_by_tag_name('h3')
                 tag = item_tag.text
-                print("Here: ", end='')
-                print(tag)
                 if (not tag) or (tag == "..."):
                     pass
                 else:
