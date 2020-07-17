@@ -1,0 +1,7 @@
+from .model_mysql import model
+
+appmodel = model()
+
+
+def get_model():
+    return appmodel

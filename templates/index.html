@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+   <title>Giphy Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+<div class="wrapper">
+    <div class="nav-container">
+        <div class="nav-left">
+            <l1 class="header">Giphy Viewer</l1>
+        </div>
+        <div class="nav-center">
+            <form action="{{ url_for('liked') }}" method="post">
+                <button class="like-button" name="url" value="{{ urls }}" type="submit"><span>LIKE</span></button>
+            </form>
+            <form action="{{ url_for('index') }}">
+                <button class="dislike-button" type="submit"><span>DISLIKE</span></button>
+            </form>
+        </div>
+        <div class="nav-right"></div>
+    </div>
+    <div class="gif-wrapper">
+        <div class="gif-container">
+            <div class="gif-content">
+                <embed type="image/gif" src="{{ url }}" class="embed-content">
+            </div>
+        </div>
+    </div>
+    <div>
+        <footer class="foot-note">Made by Jonathan Bral</footer>
+    </div>
+</div>
+</body>
+</html>

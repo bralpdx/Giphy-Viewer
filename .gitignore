@@ -1,0 +1,17 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+/.idea/
+
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# Editor-based HTTP Client requests
+/httpRequests/
+
+# Python Specific dependecies
+/__pycache__/
+/env/
+geckodriver.log
+*.pyc

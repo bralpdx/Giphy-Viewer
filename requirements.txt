@@ -1,0 +1,11 @@
+# Web-Framework
+flask
+
+# MySQL python driver
+mysql-connector-python
+
+# Python HTTP library
+requests
+
+# HTML parser
+selenium
