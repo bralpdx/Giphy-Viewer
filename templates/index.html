@@ -13,7 +13,7 @@
         </div>
         <div class="nav-center">
             <form action="{{ url_for('liked') }}" method="post">
-                <button class="like-button" name="url" value="{{ urls }}" type="submit"><span>LIKE</span></button>
+                <button class="like-button" name="url" value="{{ url }}" type="submit"><span>LIKE</span></button>
             </form>
             <form action="{{ url_for('index') }}">
                 <button class="dislike-button" type="submit"><span>DISLIKE</span></button>

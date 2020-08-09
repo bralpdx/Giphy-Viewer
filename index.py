@@ -16,7 +16,7 @@ class Index(MethodView):
         if not user.likes:
             url = Gifs().retrieve_rand()
         else:
-            if choice > 1:
+            if choice > 7:
                 url = Gifs().retrieve()
             else:
                 url = Gifs().retrieve_rand()
