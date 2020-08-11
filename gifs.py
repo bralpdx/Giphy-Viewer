@@ -16,7 +16,7 @@ class Gifs:
         """
         self.model = dbmodel.get_model()
         self.user = user
-        self.max_tries  = 5
+        self.max_tries = 5
 
     # Gets all tags of current gif from database
     def get_tags(self, url):
@@ -33,6 +33,8 @@ class Gifs:
         current_try = 0
         tag = user.get_tag()
         output = self.model.select_with_tag(tag)
+        if not self.user.search_visited(output[1]):
+            output = False
 
         while not output:
             tag = user.get_tag()
@@ -44,8 +46,13 @@ class Gifs:
             if current_try >= self.max_tries:
                 output = self.retrieve_rand()
 
-        self.user.add_visited(output[1])
-        return output[0]
+        # If a gifid failed to return
+        if output[1] == 't':
+            # Try again to get the gifid
+            return output
+        else:
+            self.user.add_visited(output[1])
+            return output[0]
 
     # Retrieves a random gif from the DB
     def retrieve_rand(self):
