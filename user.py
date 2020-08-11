@@ -55,10 +55,30 @@ class User:
 
     # Searches to see if a gif has been visited
     def search_visited(self, gifid):
-        for i in self.visited:
-            if i == gifid:
+        # No url's have been added
+        if not self.visited:
+            return True
+        if self.visited[-1] < gifid:
+            # URL hasn't been visited
+            return True
+
+        last_index = len(self.visited) - 1
+        return self.binary_search(gifid, 0, last_index)
+
+    # Standard binary search for visited list
+    def binary_search(self, key, lo, hi):
+        mid = lo + (hi - lo) // 2
+        if hi >= lo:
+            if self.visited[mid] == key:
+                # Link has been shown
                 return False
-        return True
+            if self.visited[mid] < key:
+                return self.binary_search(key, (mid + 1), hi)
+            else:
+                return self.binary_search(key, lo, (mid - 1))
+        else:
+            # Wasn't found. Link hasn't been shown.
+            return True
 
 
 # Creates a global instance that is passed between modules.
