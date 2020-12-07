@@ -12,6 +12,6 @@ A record of previously shown gifs is kept, as a way to keep the user from seeing
 has been collected via the [Giphy-Viewer Webscraper](https://github.com/bralpdx/Giphy-Viewer/tree/master/scrape), so it is subject to showing
 repeated gifs, due to [Giphy's](https://giphy.com/) gif viewer occasionally showing duplicate content under different URLs.
 
-![](https://github.com/bralpdx/Giphy-Viewer/blob/master/demo/17-07-2020%20demo.gif "Gif Discovery Demo") 
+![](https://github.com/bralpdx/Giphy-Viewer/blob/dev/demo/gif_discov_btstrp.gif "Gif Discovery Demo") 
 
 Author: Jonathan Bral
