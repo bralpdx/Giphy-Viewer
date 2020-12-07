@@ -13,6 +13,7 @@ class User:
     def __init__(self):
         self.likes = []
         self.visited = []
+        self.n = len(self.likes)  # Number of items in 'Liked' array
 
     # Returns list of dicts of liked tags
     def get_likes(self):
@@ -36,6 +37,7 @@ class User:
     # Adds new tag
     def add_tag(self, tag):
         self.likes.append({"tag": tag, "count": 1})
+        self.n = len(self.likes)
 
     # Gets a tag from the users liked
     def get_tag(self):
