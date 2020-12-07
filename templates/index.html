@@ -23,12 +23,12 @@
             <li class="col-md mx-auto">
                 <form action="{{ url_for('liked') }}" method="post">
                     <input type="hidden" name=url value="{{ url }}">
-                    <button class="fa fa-thumbs-up fa-3x btn-primary btn-lg btn-block my-2" type=submit title="Like"></button>
+                    <button class="zoom fa fa-thumbs-up fa-3x btn-primary btn-lg btn-block my-2" type=submit title="Like"></button>
                 </form>
             </li>
             <li class="col-md mx-auto">
                 <form action="{{ url_for('index') }}">
-                    <button class="fa fa-thumbs-down fa-3x btn-danger btn-lg btn-block my-2" type="submit" title="Dislike"></button>
+                    <button class="zoom fa fa-thumbs-down fa-3x btn-danger btn-lg btn-block my-2" type="submit" title="Dislike"></button>
                 </form>
             </li>
         </ul>

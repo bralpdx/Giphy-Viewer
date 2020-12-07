@@ -9,6 +9,13 @@ html, body {
     background: #000036;
 }
 
+/* Enlarges buttons on hover */
+.zoom:hover {
+    transition-duration: 1s;
+    transform: scale(1.02);
+}
+
+
 /* Main Content wrapper */
 .wrapper {
     width: 100%;
